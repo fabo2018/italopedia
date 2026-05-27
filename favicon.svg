@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" rx="8" fill="#1a1610"></rect>
+<rect x="8" y="14" width="48" height="3" fill="#009246"></rect>
+<rect x="8" y="18" width="48" height="3" fill="#fff"></rect>
+<rect x="8" y="22" width="48" height="3" fill="#ce2b37"></rect>
+<text x="32" y="46" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-weight="700" font-size="22" fill="#faf7f0">I</text>
+<text x="32" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="7" letter-spacing="0.5" fill="#b83020">PEDIA</text>
+</svg>

@@ -1,0 +1,17 @@
+# Cloudflare Pages — Redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Normalize trailing slashes
+/index.html  /  301
+
+# Common typos / legacy URLs
+/visa/         /visas/         301
+/permesso/     /residency/permesso-di-soggiorno/  301
+/flat-tax/     /taxes/flat-tax-regime/            301
+/jure/         /citizenship/jure-sanguinis/       301
+/erv/          /visas/elective-residence-visa/    301
+/dnv/          /visas/digital-nomad-visa/         301
+/blog/*        /:splat                            301
+
+# Catch-all → 404
+/*  /404.html  404
