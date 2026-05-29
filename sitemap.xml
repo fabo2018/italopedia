@@ -92,6 +92,7 @@
 
   <!-- Static pages -->
   <url><loc>https://italopedia.com/about/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://italopedia.com/contact/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/consult/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/shop/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/resources/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
