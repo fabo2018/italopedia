@@ -2,7 +2,7 @@
 title: "Best Private Health Insurance for Americans in Italy (2025): Cigna vs AXA vs Allianz"
 slug: "best-private-health-insurance-italy-americans"
 category: "healthcare"
-description: "The best international health insurance plans for Americans living in Italy — detailed comparison of Cigna Global, AXA, Allianz Care, and others. Costs, coverage, what to look for, and when to combine with Italy's SSN."
+description: "The best international health insurance plans for Americans living in Italy — detailed comparison of <a href="https://www.cigna.com/international" target="_blank" rel="sponsored nofollow">Cigna Global</a>, AXA, <a href="https://www.allianzcare.com" target="_blank" rel="sponsored nofollow">Allianz Care</a>, and others. Costs, coverage, what to look for, and when to combine with Italy's SSN."
 keywords: ["best health insurance Italy Americans", "Cigna AXA Allianz Italy expats", "international health insurance Italy", "private health insurance Italy foreigners", "expat health insurance Italy 2025"]
 last_verified: "2025-05-24"
 author: "Fabrizio Boggio"
@@ -129,7 +129,7 @@ Many American expats keep a private plan (often a basic or mid-tier one) alongsi
 ### IMG Global (Cigna-affiliated)
 **Flexible and affordable.** Popular with expats on tighter budgets. Good network, decent claims process.
 
-### GeoBlue (BCBS International)
+### <a href="https://www.geo-blue.com" target="_blank" rel="sponsored nofollow">GeoBlue</a> (BCBS International)
 **Best for Americans who need US coverage.** GeoBlue is specifically designed for US citizens living or traveling abroad and maintains strong BCBS network access in the US. Premium option for people who return to the US frequently.
 
 ---

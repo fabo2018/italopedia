@@ -112,7 +112,7 @@ You'll need a certificate from your employer confirming this, plus your own crim
 ### 6. Health Insurance Valid in Italy
 Comprehensive health insurance covering the full duration of your stay in Italy, with minimum coverage of **€30,000**.
 
-International health insurance plans (Cigna Global, AXa International, Allianz Care) are specifically designed for this use case. Expect to pay €800–2,000/year depending on age and coverage.
+International health insurance plans (<a href="https://www.cigna.com/international" target="_blank" rel="sponsored nofollow">Cigna Global</a>, AXa International, <a href="https://www.allianzcare.com" target="_blank" rel="sponsored nofollow">Allianz Care</a>) are specifically designed for this use case. Expect to pay €800–2,000/year depending on age and coverage.
 
 ### 7. Proof of Accommodation in Italy
 A signed lease agreement or confirmed booking for accommodation in Italy. Must be for the duration of your stay.

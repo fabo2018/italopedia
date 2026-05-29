@@ -202,9 +202,9 @@ With a GP prescription, medications are subsidized:
 For your visa application and your first weeks in Italy before SSN enrollment is complete, you need private health insurance valid in Italy.
 
 **Recommended international health insurers for Italy:**
-- **Cigna Global** — widely accepted, strong Italy network
-- **AXA International** — good European coverage
-- **Allianz Care** — solid option for longer stays
+- **<a href="https://www.cigna.com/international" target="_blank" rel="sponsored nofollow">Cigna Global</a>** — widely accepted, strong Italy network
+- **<a href="https://www.axaglobalhealthcare.com" target="_blank" rel="sponsored nofollow">AXA International</a>** — good European coverage
+- **<a href="https://www.allianzcare.com" target="_blank" rel="sponsored nofollow">Allianz Care</a>** — solid option for longer stays
 - **IMG Global** — competitive pricing
 
 Expect to pay **€800–2,000/year** depending on age, coverage level, and deductible. These policies are also required for your visa application (minimum €30,000 coverage).
