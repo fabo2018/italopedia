@@ -428,8 +428,8 @@ gtag('config', 'G-6G6G1Z5KED');
 (function(){
 'use strict';
 var CNAME='italopedia_consent',DAYS=365,PUB='ca-pub-5146830468822913',GA4='G-6G6G1Z5KED';
-function gc(){var m=document.cookie.match(new RegExp('(?:^|;\s*)'+CNAME+'=([^;]*)'));try{return m?JSON.parse(decodeURIComponent(m[1])):null}catch(e){return null}}
-function sc(v){var d=new Date();d.setTime(d.getTime()+DAYS*864e5);document.cookie=CNAME+'='+encodeURIComponent(JSON.stringify(v))+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}
+function gc(){var cs=document.cookie.split(';');for(var i=0;i<cs.length;i++){var c=cs[i].trim();if(c.indexOf(CNAME+'=')===0){try{return JSON.parse(decodeURIComponent(c.slice(CNAME.length+1)));}catch(e){return null;}}}return null;}
+function sc(v){var d=new Date();d.setTime(d.getTime()+DAYS*864e5);document.cookie=CNAME+'='+encodeURIComponent(JSON.stringify(v))+';expires='+d.toUTCString()+';max-age='+DAYS*86400+';path=/;SameSite=Lax'}
 function addScript(src,attrs){var s=document.createElement('script');s.async=true;s.src=src;if(attrs)Object.keys(attrs).forEach(function(k){s[k]=attrs[k]});document.head.appendChild(s)}
 function loadAds(pers){if(window._adsl)return;window._adsl=1;window.adsbygoogle=window.adsbygoogle||[];if(!pers)window.adsbygoogle.requestNonPersonalizedAds=1;addScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+PUB,{crossOrigin:'anonymous'})}
 function updateCM(c){if(typeof gtag!=='function')return;if(c.analytics)gtag('consent','update',{'analytics_storage':'granted'});if(c.advertising)gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});}function apply(c){updateCM(c);loadAds(c.advertising)}
@@ -444,10 +444,9 @@ function openModal(){
 }
 function closeModal(){hide('cc-overlay');hide('cc-modal')}
 window.italopediaConsent={openModal:openModal};
+var _cc=gc();
+if(_cc){apply(_cc);}else{loadAds(false);show('cc-banner');}
 document.addEventListener('DOMContentLoaded',function(){
-  var c=gc();
-  if(!c){show('cc-banner');loadAds(false)}
-  else{apply(c)}
   var ab=el('cc-accept-btn');if(ab)ab.addEventListener('click',function(){var c={necessary:true,analytics:true,advertising:true,functional:true,ts:Date.now()};sc(c);hide('cc-banner');closeModal();apply(c)});
   var rb=el('cc-reject-btn');if(rb)rb.addEventListener('click',function(){var c={necessary:true,analytics:false,advertising:false,functional:false,ts:Date.now()};sc(c);hide('cc-banner');closeModal();apply(c)});
   var cb=el('cc-customize-btn');if(cb)cb.addEventListener('click',openModal);
