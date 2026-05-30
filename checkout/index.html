@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Consent Mode v2 -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'wait_for_update': 500
+});
+</script>
+<!-- Google tag (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6G6G1Z5KED"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6G6G1Z5KED');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Checkout — Italopedia</title>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/css/main.css"/>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+<style>
+.checkout-wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+.checkout-back{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.78rem;color:var(--ink3);text-decoration:none;margin-bottom:32px;letter-spacing:.04em;transition:color .15s}
+.checkout-back:hover{color:var(--red)}
+.checkout-header{margin-bottom:32px}
+.checkout-badge{display:inline-block;background:var(--red);color:#fff;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:12px}
+.checkout-title{font-family:var(--sans);font-weight:800;font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:-0.035em;line-height:1.15;margin:0 0 10px}
+.checkout-desc{font-size:1.05rem;color:var(--ink2);line-height:1.65;margin:0}
+.checkout-price-row{display:flex;align-items:baseline;gap:12px;margin-top:18px}
+.checkout-price{font-family:var(--sans);font-weight:800;font-size:2.4rem;letter-spacing:-0.04em;color:var(--ink)}
+.checkout-old-price{font-size:1.1rem;color:var(--ink4);text-decoration:line-through}
+.checkout-save{font-family:var(--mono);font-size:.75rem;color:var(--green,#2d6a4f);background:rgba(45,106,79,.1);padding:3px 8px;border-radius:4px;letter-spacing:.04em}
+.checkout-divider{border:none;border-top:1px solid var(--border);margin:28px 0}
+.checkout-includes h3{font-family:var(--sans);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin:0 0 16px}
+.checkout-includes ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.checkout-includes li{display:flex;align-items:flex-start;gap:10px;font-size:.95rem;color:var(--ink2);line-height:1.5}
+.checkout-includes li::before{content:"✓";color:var(--green,#2d6a4f);font-weight:700;flex-shrink:0;margin-top:1px}
+.checkout-trust{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;padding:18px 20px;background:var(--paper2);border:1px solid var(--border);border-radius:8px;margin:28px 0}
+.checkout-trust-item{display:flex;align-items:center;gap:7px;font-size:.83rem;color:var(--ink2);font-family:var(--mono)}
+.checkout-trust-item .t-icon{font-size:1rem}
+.checkout-pay-icons{display:flex;gap:8px;align-items:center}
+.pay-icon{background:var(--paper2);border:1px solid var(--border);border-radius:5px;padding:5px 10px;font-size:.72rem;font-weight:700;font-family:var(--sans);color:var(--ink3);letter-spacing:.04em;white-space:nowrap}
+.checkout-cta{margin-top:28px}
+.checkout-main-btn{display:block;width:100%;padding:18px 24px;background:var(--red);color:#fff;font-family:var(--sans);font-weight:800;font-size:1.05rem;letter-spacing:-.01em;border:none;border-radius:8px;cursor:pointer;text-decoration:none;text-align:center;transition:opacity .15s;line-height:1}
+.checkout-main-btn:hover{opacity:.88}
+.checkout-sub-note{font-size:.8rem;color:var(--ink4);text-align:center;margin-top:10px;font-family:var(--mono);letter-spacing:.03em}
+.checkout-faq{margin-top:48px;border-top:1px solid var(--border);padding-top:32px}
+.checkout-faq h3{font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin:0 0 20px}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:600;font-size:.92rem;margin:0 0 5px;color:var(--ink)}
+.faq-a{font-size:.88rem;color:var(--ink3);margin:0;line-height:1.6}
+.checkout-not-found{text-align:center;padding:80px 24px;color:var(--ink3)}
+.checkout-not-found h2{font-family:var(--sans);font-size:1.4rem;margin-bottom:12px}
+</style>
+</head>
+<body>
+<nav class="topnav"><div class="nav-inner">
+  <a href="../" class="nav-logo">Italo<span>pedia</span><span class="tld">.com</span></a>
+  <div class="nav-links"><a href="../visas/" class="nav-link">Visas</a><a href="../residency/" class="nav-link">Residency</a><a href="../taxes/" class="nav-link">Taxes</a><a href="../healthcare/" class="nav-link">Healthcare</a><a href="../property/" class="nav-link">Property</a><a href="../citizenship/" class="nav-link">Citizenship</a><a href="../regions/" class="nav-link">Regions</a><a href="../cost-of-living/" class="nav-link">Cost of Living</a><a href="../shop/" class="nav-link">Shop</a></div>
+  <div class="nav-right"><button class="nav-icon-btn" data-search-trigger>⌕</button>
+    <a href="../newsletter/" class="nav-cta">Free Guide ↓</a><button class="mobile-toggle">☰</button></div>
+</div></nav>
+
+<div class="checkout-wrap" id="checkout-wrap">
+  <div class="checkout-not-found" id="loading-state">
+    <p style="font-size:2rem">⌛</p>
+    <p>Loading product…</p>
+  </div>
+</div>
+
+<script>
+(function(){
+var PRODUCTS = {
+  'visa-bundle': {
+    name: 'The Complete Italy Visa Bundle',
+    badge: '★ Bestseller',
+    icon: '🛂',
+    price: 49,
+    oldPrice: 89,
+    desc: 'Every long-stay visa for Americans — ERV, Digital Nomad, Investor, Self-Employment, Student — in one 180-page PDF with document checklists, sample forms, and consulate-specific tips.',
+    includes: [
+      '180-page comprehensive PDF guide',
+      'Elective Residence Visa (ERV) complete walkthrough',
+      'Digital Nomad Visa requirements and application steps',
+      'Investor Visa (Golden Visa) process explained',
+      'Self-Employment Visa for freelancers and business owners',
+      'Italy Student Visa guide',
+      'Document checklists for all 5 visa types',
+      'Consulate-specific tips by US state of residence',
+      'Sample cover letters and application templates',
+      'Lifetime updates included'
+    ],
+    stripe: 'https://buy.stripe.com/9B600icgQgqn5FU9f2bsc05'
+  },
+  'jure-sanguinis': {
+    name: 'Jure Sanguinis Master Pack',
+    badge: '★ Bestseller',
+    icon: '🇮🇹',
+    price: 39,
+    oldPrice: 69,
+    desc: 'A complete jure sanguinis playbook — the consulate route, the 1948 court route, document-research templates, naturalization lookup guides, and sample letters to Italian comuni.',
+    includes: [
+      'Complete jure sanguinis process walkthrough',
+      'The 1948 court route explained step by step',
+      'Document research templates for Italian archives',
+      'Comune archive request letter templates (Italian + English)',
+      'Naturalization record lookup guide (US records)',
+      'Consulate vs. court route comparison and decision guide',
+      'Timeline and cost estimates for both routes',
+      'FamilySearch and Antenati research guide',
+      'Sample letters to comuni and tribunali',
+      'Lifetime updates included'
+    ],
+    stripe: 'https://buy.stripe.com/dRm28q1Cc6PN8S6bnabsc03'
+  },
+  'tax-guide': {
+    name: 'US-Italy Tax Survival Guide 2025',
+    badge: 'New 2025',
+    icon: '📊',
+    price: 29,
+    oldPrice: null,
+    desc: '120 pages covering IRPEF, the flat tax regime, FBAR/FATCA, the impatriati and 7% pension regimes, and a 12-month tax calendar. Reviewed by a licensed Italian commercialista.',
+    includes: [
+      '120-page comprehensive tax guide',
+      'IRPEF tax brackets explained for US residents',
+      'Flat Tax Regime (€100,000 cap) deep dive',
+      'FBAR and FATCA compliance for Italy residents',
+      'Impatriati Regime — 50% income exclusion guide',
+      '7% flat tax for foreign pensioners in Southern Italy',
+      'US-Italy Tax Treaty benefits fully explained',
+      '12-month tax deadline calendar',
+      'How to find and work with an Italian commercialista',
+      'Reviewed by a licensed Italian commercialista'
+    ],
+    stripe: 'https://buy.stripe.com/cNi7sKft24HF9Wa9f2bsc04'
+  },
+  'buying-property': {
+    name: 'Buying Property in Italy (Complete)',
+    badge: 'Featured',
+    icon: '🏠',
+    price: 35,
+    oldPrice: null,
+    desc: 'From the first house viewing to the rogito notary closing — including 1-euro home programs, mortgage strategies for non-residents, and tax planning after purchase.',
+    includes: [
+      'End-to-end property purchase walkthrough',
+      'Compromesso (preliminary contract) explained',
+      'Rogito notary closing — what to expect, step by step',
+      'Property purchase taxes calculated exactly',
+      'Mortgage strategies for non-EU residents',
+      '1-Euro house programs — active towns in 2025',
+      'Best regions for property investment analysis',
+      'Italian real estate agent guide (how to avoid the traps)',
+      'Post-purchase: IMU, TARI, and utility setup',
+      'Renovation permits and Superbonus overview'
+    ],
+    stripe: 'https://buy.stripe.com/00waEWa8Ib632tIdvibsc02'
+  },
+  'first-90-days': {
+    name: 'First 90 Days in Italy Pack',
+    badge: 'Bundle',
+    icon: '🗓️',
+    price: 24,
+    oldPrice: null,
+    desc: 'Day-by-day playbook for your first three months: permesso di soggiorno, anagrafe, codice fiscale, tessera sanitaria, bank account, SIM, driver\'s license. Official forms included.',
+    includes: [
+      'Day-by-day arrival checklist (first 90 days)',
+      'Permesso di Soggiorno application guide + document kit',
+      'Anagrafe (residency registration) walkthrough',
+      'Codice Fiscale application — online and in-person',
+      'Tessera Sanitaria and SSN enrollment guide',
+      'Italian bank account opening for Americans',
+      'SIM card setup (best plans for expats)',
+      'Driver\'s license conversion or Italian license guide',
+      'Italian bureaucracy survival tips from 15 years experience',
+      'All official forms in English + Italian'
+    ],
+    stripe: 'https://buy.stripe.com/00w7sKbcM2zx0lAfDqbsc06'
+  },
+  'where-to-live': {
+    name: 'Where to Live in Italy: 20 City Profiles',
+    badge: 'Premium',
+    icon: '🗺️',
+    price: 19,
+    oldPrice: null,
+    desc: 'Detailed expat-focused profiles of Rome, Florence, Milan, Bologna, Turin, Lucca, Lecce, Palermo, and 12 more — with rent data, expat community size, and quality-of-life scoring.',
+    includes: [
+      '20 in-depth city profiles written from an expat perspective',
+      'Current rent data by neighborhood (2025 figures)',
+      'Quality-of-life scoring across 8 dimensions',
+      'Expat community size and activity level per city',
+      'English-speaker friendliness rating',
+      'Cost of living index comparison by city',
+      'Best neighborhoods for Americans per city',
+      'Public transport and walkability scores',
+      'Healthcare access and private hospital availability',
+      'Personal recommendations from 15+ years living in Italy'
+    ],
+    stripe: 'https://buy.stripe.com/fZucN4a8Ia1Z5FU8aYbsc01'
+  },
+  'all-access-bundle': {
+    name: 'Italopedia All-Access Bundle',
+    badge: '★ Best Value',
+    icon: '🗝️',
+    price: 129,
+    oldPrice: 205,
+    desc: 'Lifetime access to every current PDF guide, plus every new guide we release, plus quarterly updates. The complete Italopedia library in one purchase.',
+    includes: [
+      'The Complete Italy Visa Bundle ($49 value)',
+      'Jure Sanguinis Master Pack ($39 value)',
+      'US-Italy Tax Survival Guide 2025 ($29 value)',
+      'Buying Property in Italy — Complete ($35 value)',
+      'First 90 Days in Italy Pack ($24 value)',
+      'Where to Live in Italy: 20 City Profiles ($19 value)',
+      'Every new guide released — lifetime access',
+      'Quarterly content updates across all guides',
+      'Priority email support from Fabrizio',
+      'Save $76 vs purchasing all guides individually'
+    ],
+    stripe: 'https://buy.stripe.com/8x23cubcM1vtd8m8aYbsc00'
+  }
+};
+
+var params = new URLSearchParams(window.location.search);
+var slug  = params.get('product') || '';
+var price = params.get('price');
+var link  = params.get('link');
+
+var p = PRODUCTS[slug];
+var stripeUrl = (p && p.stripe) ? p.stripe : (link || '');
+var displayPrice = (p && p.price) ? p.price : (price ? parseInt(price) : null);
+var oldPrice = p ? p.oldPrice : null;
+
+var wrap = document.getElementById('checkout-wrap');
+
+if (!p && !stripeUrl) {
+  wrap.innerHTML = '<div class="checkout-not-found"><p style="font-size:2.5rem">😕</p><h2>Product not found</h2><p>Please go back to the shop and try again.</p><a href="../shop/" class="checkout-main-btn" style="display:inline-block;width:auto;margin-top:20px">← Back to Shop</a></div>';
+} else {
+  var name  = p ? p.name  : 'Guide';
+  var badge = p ? p.badge : '';
+  var icon  = p ? p.icon  : '📄';
+  var desc  = p ? p.desc  : '';
+  var items = p ? p.includes : [];
+  var savings = (oldPrice && displayPrice) ? '$' + (oldPrice - displayPrice) + ' saved' : '';
+
+  var includesHtml = items.length ? (
+    '<div class="checkout-includes"><h3>What\'s included</h3><ul>' +
+    items.map(function(i){ return '<li>' + i + '</li>'; }).join('') +
+    '</ul></div><hr class="checkout-divider"/>'
+  ) : '';
+
+  var priceHtml = displayPrice
+    ? '<div class="checkout-price-row"><span class="checkout-price">$' + displayPrice + '</span>' +
+      (oldPrice ? '<span class="checkout-old-price">$' + oldPrice + '</span>' : '') +
+      (savings  ? '<span class="checkout-save">' + savings + '</span>' : '') +
+      '</div>'
+    : '';
+
+  wrap.innerHTML =
+    '<a href="../shop/" class="checkout-back">← Back to Shop</a>' +
+    '<div class="checkout-header">' +
+    (badge ? '<div class="checkout-badge">' + badge + '</div>' : '') +
+    '<h1 class="checkout-title">' + icon + '&nbsp; ' + name + '</h1>' +
+    (desc ? '<p class="checkout-desc">' + desc + '</p>' : '') +
+    priceHtml +
+    '</div>' +
+    '<hr class="checkout-divider"/>' +
+    includesHtml +
+    '<div class="checkout-trust">' +
+    '<div class="checkout-trust-item"><span class="t-icon">🔒</span> Secure checkout (Stripe)</div>' +
+    '<div class="checkout-trust-item"><span class="t-icon">⚡</span> Instant delivery via email</div>' +
+    '<div class="checkout-trust-item"><span class="t-icon">↩️</span> 30-day money-back guarantee</div>' +
+    '</div>' +
+    '<div style="display:flex;gap:8px;align-items:center;margin-bottom:24px">' +
+    '<span style="font-size:.78rem;color:var(--ink4);font-family:var(--mono)">Accepted:</span>' +
+    '<span class="pay-icon">VISA</span><span class="pay-icon">MC</span>' +
+    '<span class="pay-icon">Apple Pay</span><span class="pay-icon">Google Pay</span>' +
+    '</div>' +
+    '<div class="checkout-cta">' +
+    '<a href="' + stripeUrl + '" class="checkout-main-btn" target="_blank" rel="noopener">Complete Purchase — $' + (displayPrice || '') + ' →</a>' +
+    '<p class="checkout-sub-note">You\'ll be redirected to Stripe\'s secure checkout · PDF delivered by email instantly</p>' +
+    '</div>' +
+    '<div class="checkout-faq">' +
+    '<h3>Frequently asked questions</h3>' +
+    '<div class="faq-item"><p class="faq-q">How do I receive my guide?</p><p class="faq-a">Immediately after payment, Stripe sends a receipt with a secure download link to your email. No account required — just click and download.</p></div>' +
+    '<div class="faq-item"><p class="faq-q">What format are the guides?</p><p class="faq-a">PDF format, optimized for both screen reading and printing. Compatible with all devices — phone, tablet, laptop, e-reader.</p></div>' +
+    '<div class="faq-item"><p class="faq-q">Is there a refund policy?</p><p class="faq-a">30-day money-back guarantee, no questions asked. If the guide isn\'t useful to you, email <a href="mailto:info@italopedia.com">info@italopedia.com</a> for a full refund.</p></div>' +
+    '</div>';
+}
+})();
+</script>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <a href="../" class="footer-logo">Italo<span>pedia</span></a>
+      <p class="footer-brand-desc">The complete English-language reference for Americans moving to and living in Italy.</p>
+      <span class="footer-stamp">📍 Torino, Italy</span>
+    </div>
+    <div><div class="footer-col-title">Categories</div><ul class="footer-links">
+      <li><a href="../visas/">Visas</a></li><li><a href="../residency/">Residency</a></li>
+      <li><a href="../taxes/">Taxes</a></li><li><a href="../healthcare/">Healthcare</a></li>
+      <li><a href="../property/">Property</a></li><li><a href="../citizenship/">Citizenship</a></li>
+      <li><a href="../regions/">Regions</a></li><li><a href="../cost-of-living/">Cost of Living</a></li>
+    </ul></div>
+    <div><div class="footer-col-title">Resources</div><ul class="footer-links">
+      <li><a href="../shop/">Shop guides</a></li>
+      <li><a href="../consult/">Book a 1:1 consult</a></li>
+      <li><a href="../newsletter/">Newsletter</a></li>
+      <li><a href="../about/">About Fabrizio</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© <span data-year>2025</span> Italopedia · All rights reserved</div>
+    <div class="footer-legal">
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="../terms/">Terms</a>
+      <button class="cc-footer-btn" onclick="italopediaConsent&&italopediaConsent.openModal()">Cookie Settings</button>
+    </div>
+  </div>
+</div></footer>
+
+<script>window.SITE_PREFIX="../";</script>
+<script src="../assets/js/main.js"></script>
+<!-- COOKIE CONSENT (minimal — no AdSense on checkout page) -->
+<style>
+#cc-banner{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e8e0d0;box-shadow:0 -4px 20px rgba(0,0,0,.08);z-index:9999;padding:1.25rem 1.5rem;display:none}
+#cc-banner.cc-on{display:block}
+.cc-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
+.cc-text{flex:1 1 280px;font-size:.85rem;color:#555}
+.cc-actions{display:flex;gap:.5rem;flex-shrink:0}
+.cc-btn{padding:.5rem 1.1rem;border-radius:6px;font-size:.82rem;font-weight:600;cursor:pointer;border:2px solid #2d6a4f;font-family:inherit;transition:background .15s,color .15s}
+.cc-btn-outline{background:transparent;color:#2d6a4f}
+.cc-btn-outline:hover{background:#2d6a4f;color:#fff}
+.cc-btn-primary{background:#2d6a4f;color:#fff}
+.cc-footer-btn{background:none;border:none;cursor:pointer;color:inherit;font-size:inherit;padding:0;text-decoration:underline;font-family:inherit}
+</style>
+<div id="cc-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cc-inner">
+    <div class="cc-text">🍪 We use cookies to analyze traffic and improve your experience. <a href="../cookies/" style="color:#2d6a4f">Learn more</a></div>
+    <div class="cc-actions">
+      <button class="cc-btn cc-btn-outline" id="cc-reject-btn">Reject</button>
+      <button class="cc-btn cc-btn-primary" id="cc-accept-btn">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+'use strict';
+var CNAME='italopedia_consent',DAYS=365,GA4='G-6G6G1Z5KED';
+function gc(){var cs=document.cookie.split(';');for(var i=0;i<cs.length;i++){var c=cs[i].trim();if(c.indexOf(CNAME+'=')===0){try{return JSON.parse(decodeURIComponent(c.slice(CNAME.length+1)));}catch(e){return null;}}}return null;}
+function sc(v){var d=new Date();d.setTime(d.getTime()+DAYS*864e5);document.cookie=CNAME+'='+encodeURIComponent(JSON.stringify(v))+';expires='+d.toUTCString()+';max-age='+DAYS*86400+';path=/;SameSite=Lax'}
+function el(id){return document.getElementById(id)}
+function show(id){var e=el(id);if(e)e.classList.add('cc-on')}
+function hide(id){var e=el(id);if(e)e.classList.remove('cc-on')}
+function updateCM(c){if(typeof gtag!=='function')return;if(c.analytics)gtag('consent','update',{'analytics_storage':'granted'});if(c.advertising)gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});}
+function apply(c){updateCM(c);}
+window.italopediaConsent={openModal:function(){show('cc-banner');}};
+var _cc=gc();
+if(_cc){apply(_cc);}else{show('cc-banner');}
+document.addEventListener('DOMContentLoaded',function(){
+  var ab=el('cc-accept-btn');if(ab)ab.addEventListener('click',function(){var c={necessary:true,analytics:true,advertising:true,functional:true,ts:Date.now()};sc(c);hide('cc-banner');apply(c);});
+  var rb=el('cc-reject-btn');if(rb)rb.addEventListener('click',function(){var c={necessary:true,analytics:false,advertising:false,functional:false,ts:Date.now()};sc(c);hide('cc-banner');});
+});
+})();
+</script>
+</body>
+</html>
