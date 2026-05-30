@@ -488,7 +488,7 @@
 <script>
 (function(){
 'use strict';
-var CNAME='italopedia_consent',DAYS=365,PUB='ca-pub-5146830468822913',GA4='G-XXXXXXXXXX';
+var CNAME='italopedia_consent',DAYS=365,PUB='ca-pub-5146830468822913',GA4='G-THJ4KV6KR2';
 function gc(){var m=document.cookie.match(new RegExp('(?:^|;\s*)'+CNAME+'=([^;]*)'));try{return m?JSON.parse(decodeURIComponent(m[1])):null}catch(e){return null}}
 function sc(v){var d=new Date();d.setTime(d.getTime()+DAYS*864e5);document.cookie=CNAME+'='+encodeURIComponent(JSON.stringify(v))+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}
 function addScript(src,attrs){var s=document.createElement('script');s.async=true;s.src=src;if(attrs)Object.keys(attrs).forEach(function(k){s[k]=attrs[k]});document.head.appendChild(s)}
