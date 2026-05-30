@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Consent Mode v2 -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'wait_for_update': 500
+});
+</script>
+<!-- Google tag (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-THJ4KV6KR2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-THJ4KV6KR2');
+</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Living in Italy on $2,500/Month: Is It Really Possible in 2025? — Italopedia</title>
@@ -580,9 +600,8 @@ var CNAME='italopedia_consent',DAYS=365,PUB='ca-pub-5146830468822913',GA4='G-THJ
 function gc(){var m=document.cookie.match(new RegExp('(?:^|;\s*)'+CNAME+'=([^;]*)'));try{return m?JSON.parse(decodeURIComponent(m[1])):null}catch(e){return null}}
 function sc(v){var d=new Date();d.setTime(d.getTime()+DAYS*864e5);document.cookie=CNAME+'='+encodeURIComponent(JSON.stringify(v))+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}
 function addScript(src,attrs){var s=document.createElement('script');s.async=true;s.src=src;if(attrs)Object.keys(attrs).forEach(function(k){s[k]=attrs[k]});document.head.appendChild(s)}
-function loadGA4(){if(window._ga4l)return;window._ga4l=1;addScript('https://www.googletagmanager.com/gtag/js?id='+GA4);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',GA4,{anonymize_ip:true})}
 function loadAds(pers){if(window._adsl)return;window._adsl=1;window.adsbygoogle=window.adsbygoogle||[];if(!pers)window.adsbygoogle.requestNonPersonalizedAds=1;addScript('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+PUB,{crossOrigin:'anonymous'})}
-function apply(c){if(c.analytics)loadGA4();loadAds(c.advertising)}
+function updateCM(c){if(typeof gtag!=='function')return;if(c.analytics)gtag('consent','update',{'analytics_storage':'granted'});if(c.advertising)gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});}function apply(c){updateCM(c);loadAds(c.advertising)}
 function el(id){return document.getElementById(id)}
 function show(id){var e=el(id);if(e)e.classList.add('cc-on')}
 function hide(id){var e=el(id);if(e)e.classList.remove('cc-on')}
