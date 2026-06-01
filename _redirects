@@ -1,17 +1,169 @@
 # Cloudflare Pages — Redirects
 # https://developers.cloudflare.com/pages/configuration/redirects/
 
-# Normalize trailing slashes
+# Normalize root
 /index.html  /  301
 
-# Common typos / legacy URLs
-/visa/         /visas/         301
-/permesso/     /residency/permesso-di-soggiorno/  301
-/flat-tax/     /taxes/flat-tax-regime/            301
-/jure/         /citizenship/jure-sanguinis/       301
-/erv/          /visas/elective-residence-visa/    301
-/dnv/          /visas/digital-nomad-visa/         301
-/blog/*        /:splat                            301
+# Trailing slash — hub pages (explicit, prevents catch-all 404 from firing first)
+/visas                 /visas/                301
+/residency             /residency/            301
+/taxes                 /taxes/                301
+/healthcare            /healthcare/           301
+/property              /property/             301
+/citizenship           /citizenship/          301
+/regions               /regions/              301
+/cost-of-living        /cost-of-living/       301
+/about                 /about/                301
+/contact               /contact/              301
+/consult               /consult/              301
+/shop                  /shop/                 301
+/resources             /resources/            301
+/newsletter            /newsletter/           301
+/checklist             /checklist/            301
+/privacy               /privacy/              301
+/terms                 /terms/                301
+/cookies               /cookies/              301
+/disclaimer            /disclaimer/           301
+/affiliate-disclosure  /affiliate-disclosure/ 301
+/checkout              /checkout/             301
+/thank-you             /thank-you/            301
 
-# Catch-all → 404
+# Trailing slash — Visas articles
+/visas/elective-residence-visa                          /visas/elective-residence-visa/                          301
+/visas/digital-nomad-visa                               /visas/digital-nomad-visa/                               301
+/visas/italy-investor-visa-golden-visa-americans        /visas/italy-investor-visa-golden-visa-americans/        301
+/visas/apostille-document-translation-italian-visa      /visas/apostille-document-translation-italian-visa/      301
+/visas/fbi-background-check-italian-visa-americans      /visas/fbi-background-check-italian-visa-americans/      301
+/visas/etias-americans-italy-schengen-guide             /visas/etias-americans-italy-schengen-guide/             301
+/visas/italy-visa-income-requirements-2025-all-types    /visas/italy-visa-income-requirements-2025-all-types/    301
+/visas/italy-spouse-visa-americans                      /visas/italy-spouse-visa-americans/                      301
+/visas/italy-student-visa                               /visas/italy-student-visa/                               301
+/visas/self-employment-visa-italy                       /visas/self-employment-visa-italy/                       301
+/visas/how-to-apply-italy-visa-usa                      /visas/how-to-apply-italy-visa-usa/                      301
+/visas/italy-visa-rejection-how-to-appeal               /visas/italy-visa-rejection-how-to-appeal/               301
+/visas/health-insurance-italian-visa                    /visas/health-insurance-italian-visa/                    301
+/visas/90-180-schengen-rule-calculator                  /visas/90-180-schengen-rule-calculator/                  301
+/visas/dual-us-italian-citizens-visa                    /visas/dual-us-italian-citizens-visa/                    301
+
+# Trailing slash — Residency articles
+/residency/permesso-di-soggiorno                               /residency/permesso-di-soggiorno/                               301
+/residency/how-to-get-codice-fiscale-italy-americans           /residency/how-to-get-codice-fiscale-italy-americans/           301
+/residency/how-to-register-anagrafe-italy-americans            /residency/how-to-register-anagrafe-italy-americans/            301
+/residency/spid-italy-foreigners-americans-guide               /residency/spid-italy-foreigners-americans-guide/               301
+/residency/declaring-presence-8-day-rule-italy-americans       /residency/declaring-presence-8-day-rule-italy-americans/       301
+/residency/permesso-di-soggiorno-renewal-americans-guide       /residency/permesso-di-soggiorno-renewal-americans-guide/       301
+/residency/getting-sim-card-italy-americans-guide              /residency/getting-sim-card-italy-americans-guide/              301
+/residency/permesso-lungo-periodo-permanent-residency-italy    /residency/permesso-lungo-periodo-permanent-residency-italy/    301
+/residency/register-foreign-car-italy                          /residency/register-foreign-car-italy/                          301
+/residency/italian-drivers-license-americans                   /residency/italian-drivers-license-americans/                   301
+/residency/open-italian-bank-account                           /residency/open-italian-bank-account/                           301
+/residency/tessera-sanitaria-expats                            /residency/tessera-sanitaria-expats/                            301
+/residency/changing-visa-type-italy                            /residency/changing-visa-type-italy/                            301
+/residency/italian-civil-union-unione-civile                   /residency/italian-civil-union-unione-civile/                   301
+/residency/marca-da-bollo-italy                                /residency/marca-da-bollo-italy/                                301
+/residency/pec-email-italy                                     /residency/pec-email-italy/                                     301
+/residency/registering-foreign-marriage-italy                  /residency/registering-foreign-marriage-italy/                  301
+
+# Trailing slash — Taxes articles
+/taxes/flat-tax-regime                                    /taxes/flat-tax-regime/                                    301
+/taxes/southern-italy-7-percent-flat-tax-foreign-pensioners /taxes/southern-italy-7-percent-flat-tax-foreign-pensioners/ 301
+/taxes/fbar-fatca-americans-italy-guide                   /taxes/fbar-fatca-americans-italy-guide/                   301
+/taxes/irpef-tax-brackets-italy-2025-americans            /taxes/irpef-tax-brackets-italy-2025-americans/            301
+/taxes/partita-iva-italy-foreigners                       /taxes/partita-iva-italy-foreigners/                       301
+/taxes/us-italy-tax-treaty-double-taxation                /taxes/us-italy-tax-treaty-double-taxation/                301
+/taxes/us-italy-social-security-totalization-agreement    /taxes/us-italy-social-security-totalization-agreement/    301
+/taxes/tax-residency-italy-when-liable                    /taxes/tax-residency-italy-when-liable/                    301
+/taxes/imu-property-tax-italy                             /taxes/imu-property-tax-italy/                             301
+/taxes/capital-gains-tax-italy                            /taxes/capital-gains-tax-italy/                            301
+/taxes/inheritance-gift-tax-italy                         /taxes/inheritance-gift-tax-italy/                         301
+/taxes/foreign-tax-credit-vs-feie-italy                   /taxes/foreign-tax-credit-vs-feie-italy/                   301
+/taxes/italian-tax-year-calendar                          /taxes/italian-tax-year-calendar/                          301
+/taxes/find-commercialista-us-tax-italy                   /taxes/find-commercialista-us-tax-italy/                   301
+/taxes/cryptocurrency-tax-italy-2025                      /taxes/cryptocurrency-tax-italy-2025/                      301
+/taxes/401k-ira-withdrawals-italy-resident                /taxes/401k-ira-withdrawals-italy-resident/                301
+/taxes/roth-ira-italy-tax-implications                    /taxes/roth-ira-italy-tax-implications/                    301
+
+# Trailing slash — Healthcare articles
+/healthcare/tessera-sanitaria-italy-health-card-americans     /healthcare/tessera-sanitaria-italy-health-card-americans/     301
+/healthcare/best-private-health-insurance-italy-americans-2025 /healthcare/best-private-health-insurance-italy-americans-2025/ 301
+/healthcare/best-health-insurance-americans-italy             /healthcare/best-health-insurance-americans-italy/             301
+/healthcare/cigna-vs-axa-vs-allianz-italy                     /healthcare/cigna-vs-axa-vs-allianz-italy/                     301
+/healthcare/enroll-italian-ssn                                /healthcare/enroll-italian-ssn/                                301
+/healthcare/english-speaking-doctors-italy                    /healthcare/english-speaking-doctors-italy/                    301
+/healthcare/specialist-visits-italy-referral                  /healthcare/specialist-visits-italy-referral/                  301
+/healthcare/emergency-room-italy-pronto-soccorso              /healthcare/emergency-room-italy-pronto-soccorso/              301
+/healthcare/dental-care-italy-americans                       /healthcare/dental-care-italy-americans/                       301
+/healthcare/mental-health-care-italy                          /healthcare/mental-health-care-italy/                          301
+/healthcare/chronic-conditions-italy-expats                   /healthcare/chronic-conditions-italy-expats/                   301
+/healthcare/top-private-hospitals-italy                       /healthcare/top-private-hospitals-italy/                       301
+
+# Trailing slash — Property articles
+/property/how-to-buy-property-italy-american-guide     /property/how-to-buy-property-italy-american-guide/     301
+/property/1-euro-house-italy                           /property/1-euro-house-italy/                           301
+/property/italian-notary-process                       /property/italian-notary-process/                       301
+/property/mortgages-non-residents-italy                /property/mortgages-non-residents-italy/                301
+/property/renting-apartment-italy-expat-guide          /property/renting-apartment-italy-expat-guide/          301
+/property/best-cities-invest-property-italy            /property/best-cities-invest-property-italy/            301
+/property/buying-property-puglia                       /property/buying-property-puglia/                       301
+/property/compromesso-preliminary-contract-italy       /property/compromesso-preliminary-contract-italy/       301
+/property/property-purchase-taxes-italy                /property/property-purchase-taxes-italy/                301
+/property/renovating-italian-stone-house               /property/renovating-italian-stone-house/               301
+/property/renting-out-property-italy-cedolare-secca    /property/renting-out-property-italy-cedolare-secca/    301
+/property/italian-lease-types-explained                /property/italian-lease-types-explained/                301
+/property/short-term-rentals-italy-rules               /property/short-term-rentals-italy-rules/               301
+
+# Trailing slash — Citizenship articles
+/citizenship/jure-sanguinis                                        /citizenship/jure-sanguinis/                                        301
+/citizenship/italian-citizenship-10-years-residency-naturalization /citizenship/italian-citizenship-10-years-residency-naturalization/ 301
+/citizenship/italian-citizenship-by-marriage                       /citizenship/italian-citizenship-by-marriage/                       301
+/citizenship/italian-citizenship-1948-case                         /citizenship/italian-citizenship-1948-case/                         301
+/citizenship/apostille-document-translation-italy                  /citizenship/apostille-document-translation-italy/                  301
+/citizenship/citizenship-court-vs-consulate-route                  /citizenship/citizenship-court-vs-consulate-route/                  301
+/citizenship/jure-sanguinis-document-checklist                     /citizenship/jure-sanguinis-document-checklist/                     301
+/citizenship/b1-italian-language-requirement                       /citizenship/b1-italian-language-requirement/                       301
+/citizenship/2024-italian-citizenship-reform                       /citizenship/2024-italian-citizenship-reform/                       301
+/citizenship/aire-registration-italians-abroad                     /citizenship/aire-registration-italians-abroad/                     301
+/citizenship/italian-passport-application                          /citizenship/italian-passport-application/                          301
+
+# Trailing slash — Regions articles
+/regions/best-cities-american-expats-italy     /regions/best-cities-american-expats-italy/     301
+/regions/living-in-tuscany-american-expat      /regions/living-in-tuscany-american-expat/      301
+/regions/living-rome-american-expat            /regions/living-rome-american-expat/            301
+/regions/living-florence-american-expat        /regions/living-florence-american-expat/        301
+/regions/sicily-american-expats-guide          /regions/sicily-american-expats-guide/          301
+/regions/florence-vs-rome-vs-bologna           /regions/florence-vs-rome-vs-bologna/           301
+/regions/best-small-towns-italy-retirees       /regions/best-small-towns-italy-retirees/       301
+/regions/quietest-regions-italy                /regions/quietest-regions-italy/                301
+/regions/best-cities-remote-workers-italy      /regions/best-cities-remote-workers-italy/      301
+/regions/best-italian-cities-families          /regions/best-italian-cities-families/          301
+/regions/living-veneto-venice-verona           /regions/living-veneto-venice-verona/           301
+/regions/test-living-italy-before-moving       /regions/test-living-italy-before-moving/       301
+/regions/living-puglia-american-expat          /regions/living-puglia-american-expat/          301
+/regions/living-sardinia-american-expat        /regions/living-sardinia-american-expat/        301
+/regions/best-coastal-towns-italy-year-round   /regions/best-coastal-towns-italy-year-round/   301
+
+# Trailing slash — Cost of Living articles
+/cost-of-living/cost-of-living-italy-vs-usa           /cost-of-living/cost-of-living-italy-vs-usa/           301
+/cost-of-living/cost-of-living-milan                  /cost-of-living/cost-of-living-milan/                  301
+/cost-of-living/cost-of-living-turin-american-expats-2025 /cost-of-living/cost-of-living-turin-american-expats-2025/ 301
+/cost-of-living/grocery-costs-italy-by-city           /cost-of-living/grocery-costs-italy-by-city/           301
+/cost-of-living/healthcare-costs-italy-vs-usa         /cost-of-living/healthcare-costs-italy-vs-usa/         301
+/cost-of-living/italy-rent-prices-city-comparison     /cost-of-living/italy-rent-prices-city-comparison/     301
+/cost-of-living/living-italy-2500-month               /cost-of-living/living-italy-2500-month/               301
+/cost-of-living/retire-italy-2000-month-budget        /cost-of-living/retire-italy-2000-month-budget/        301
+/cost-of-living/hidden-costs-living-italy             /cost-of-living/hidden-costs-living-italy/             301
+/cost-of-living/cost-of-living-bologna                /cost-of-living/cost-of-living-bologna/                301
+/cost-of-living/cost-of-living-lecce                  /cost-of-living/cost-of-living-lecce/                  301
+/cost-of-living/italy-vs-spain-vs-portugal-cost       /cost-of-living/italy-vs-spain-vs-portugal-cost/       301
+
+# Common typos / legacy shortcuts (kept)
+/visa/         /visas/                                  301
+/permesso/     /residency/permesso-di-soggiorno/        301
+/flat-tax/     /taxes/flat-tax-regime/                  301
+/jure/         /citizenship/jure-sanguinis/             301
+/erv/          /visas/elective-residence-visa/          301
+/dnv/          /visas/digital-nomad-visa/               301
+/blog/*        /:splat                                  301
+
+# Catch-all → 404 (must stay LAST)
 /*  /404.html  404
