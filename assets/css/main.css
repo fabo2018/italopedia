@@ -1319,6 +1319,12 @@ body{
   font-size:14px;line-height:1.35;color:var(--ink);
 }
 
+/* Shop CTA inline promo */
+.shop-cta{margin-top:32px;padding:18px 22px;background:var(--paper2);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:3px}
+.shop-cta-inner{font-size:14px;line-height:1.55;color:var(--ink)}
+.shop-cta-link{color:var(--red);font-weight:600;text-decoration:none}
+.shop-cta-link:hover{text-decoration:underline}
+
 /* ═══════════════════════════════════════════════════════════
    STATIC PAGES
 ═══════════════════════════════════════════════════════════ */
