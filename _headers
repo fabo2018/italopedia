@@ -15,3 +15,8 @@
 # Standard cache for HTML
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate
+
+# PDF downloads — force download, no caching of purchase-gated files
+/shop/downloads/*.pdf
+  Content-Disposition: attachment
+  Cache-Control: private, no-store
