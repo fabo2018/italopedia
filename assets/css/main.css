@@ -1036,6 +1036,7 @@ body{
   position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
+img.article-hero-img{height:auto;display:block;object-fit:cover;}
 .article-hero-img .img-credit{
   position:absolute;bottom:14px;right:16px;
   font-family:var(--mono);font-size:10px;
