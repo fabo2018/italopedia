@@ -104,10 +104,10 @@ function clSubscribe(form, e) {
   if (!email) return;
   var btn = form.querySelector('button');
   btn.disabled = true; btn.textContent = '...';
-  fetch('https://app.beehiiv.com/subscriptions', {
+  fetch('https://api.convertkit.com/v3/forms/9514936/subscribe', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({email: email, publicationId: '83935e9a-30fd-4975-a79a-e10be8100271', referringSite: 'checklist'})
+    body: JSON.stringify({api_key: 'Ub3gLjuKcdCiEejT', email: email})
   }).then(function(r) {
     document.getElementById('checklist-form-wrap').style.display = 'none';
     document.getElementById('checklist-success').style.display = 'block';

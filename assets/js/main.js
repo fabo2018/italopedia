@@ -19,17 +19,16 @@ function nlSubscribe(form, e) {
     btn.textContent = '✓';
   }
   function fallback() {
-    window.open('https://www.beehiiv.com/subscribe/83935e9a-30fd-4975-a79a-e10be8100271', '_blank');
-    var txt = '→ Complete signup in the tab that just opened.';
-    if (msgEl) { msgEl.textContent = txt; }
     btn.disabled = false; btn.textContent = 'Subscribe →';
+    var txt = '✗ Something went wrong — try again.';
+    if (msgEl) { msgEl.textContent = txt; }
   }
-  fetch('https://app.beehiiv.com/subscriptions', {
+  fetch('https://api.convertkit.com/v3/forms/9514936/subscribe', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: email, publicationId: '83935e9a-30fd-4975-a79a-e10be8100271', referringSite: location.hostname })
+    body: JSON.stringify({ api_key: 'Ub3gLjuKcdCiEejT', email: email })
   }).then(function(r) {
-    if (r.ok || r.status === 201) { success(); } else { fallback(); }
+    if (r.ok || r.status === 200 || r.status === 201) { success(); } else { fallback(); }
   }).catch(fallback);
 }
 
