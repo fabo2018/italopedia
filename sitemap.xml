@@ -130,20 +130,11 @@
 
   <!-- Static pages -->
   <url><loc>https://italopedia.com/about/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/affiliate-disclosure/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/checklist/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/checkout/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/consult/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/contact/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/cookie-policy/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/cookies/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/disclaimer/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/newsletter/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/privacy-policy/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/privacy/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/resources/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://italopedia.com/shop/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/terms/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://italopedia.com/thank-you/</loc><lastmod>2026-06-01</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
 </urlset>
