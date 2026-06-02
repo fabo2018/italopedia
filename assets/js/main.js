@@ -3,6 +3,36 @@
    Shared client interactions
 ═══════════════════════════════════════════ */
 
+/* ── Newsletter subscribe ───────────────── */
+function nlSubscribe(form, e) {
+  e.preventDefault();
+  var email = form.querySelector('[type="email"]').value.trim();
+  if (!email) return;
+  var btn = form.querySelector('[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = '...';
+  var msgEl = (form.closest('.newsletter-form') || form).querySelector('.nl-msg');
+  function success() {
+    var txt = '✓ You\'re in — check your inbox.';
+    if (msgEl) { msgEl.textContent = txt; }
+    else { var s = document.createElement('span'); s.style.cssText='color:var(--paper);font-size:14px;display:block;margin-top:10px'; s.textContent = txt; form.appendChild(s); }
+    btn.textContent = '✓';
+  }
+  function fallback() {
+    window.open('https://www.beehiiv.com/subscribe/83935e9a-30fd-4975-a79a-e10be8100271', '_blank');
+    var txt = '→ Complete signup in the tab that just opened.';
+    if (msgEl) { msgEl.textContent = txt; }
+    btn.disabled = false; btn.textContent = 'Subscribe →';
+  }
+  fetch('https://app.beehiiv.com/subscriptions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, publicationId: '83935e9a-30fd-4975-a79a-e10be8100271', referringSite: location.hostname })
+  }).then(function(r) {
+    if (r.ok || r.status === 201) { success(); } else { fallback(); }
+  }).catch(fallback);
+}
+
 (function(){
   'use strict';
 

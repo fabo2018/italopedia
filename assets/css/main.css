@@ -657,6 +657,17 @@ body{
   margin-top:8px;font-weight:500;
 }
 .form-submit:hover{background:var(--red2)}
+/* newsletter embed card (replaces beehiiv iframe) */
+.nl-embed-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:32px;position:relative}
+.nl-embed-card::before{content:'';position:absolute;top:-1px;left:24px;width:48px;height:2px;background:var(--red)}
+.nl-embed-title{font-family:var(--sans);font-weight:700;font-size:19px;color:var(--paper);margin:0 0 8px}
+.nl-embed-sub{font-family:var(--mono);font-size:11px;color:rgba(250,247,240,0.45);margin:0 0 22px;text-transform:uppercase;letter-spacing:.06em}
+.nl-embed-note{font-family:var(--mono);font-size:10px;color:rgba(250,247,240,0.3);margin:14px 0 0;text-align:center}
+.nl-msg{display:block;min-height:18px;font-size:13px;color:var(--paper);margin-top:10px;font-family:var(--mono)}
+/* footer form — horizontal layout */
+.nl-footer-form{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.nl-footer-form .form-input{flex:1;min-width:200px;padding:10px 14px;font-size:13px}
+.nl-footer-form .form-submit{width:auto;white-space:nowrap;padding:10px 18px;font-size:12px;margin-top:0}
 .form-privacy{
   font-family:var(--mono);font-size:10px;
   color:rgba(250,247,240,0.35);
