@@ -27,6 +27,7 @@ gtag('config', 'G-6G6G1Z5KED');
 <meta name="description" content="Download our complete 47-point checklist for moving to Italy as an American. PDF format, 22 pages, every step from year -1 to month +12."/>
 <meta name="theme-color" content="#1a1610"/>
 <link rel="canonical" href="https://italopedia.com/checklist/"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Free 47-Point Italy Relocation Checklist — Italopedia"/>
 <meta property="og:description" content="Download our complete 47-point checklist for moving to Italy as an American. PDF format, 22 pages, every step from year -1 to month +12."/>
@@ -71,18 +72,50 @@ gtag('config', 'G-6G6G1Z5KED');
       </div>
 
       <aside style="background:var(--white);border:1px solid var(--border);border-radius:6px;padding:32px;position:sticky;top:88px;box-shadow:var(--shadow-sm)">
-        <div style="background:var(--paper2);border:1px dashed var(--border2);border-radius:4px;padding:36px 18px;text-align:center;margin-bottom:24px">
-          <div class="ph-pattern green"></div>
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink4);letter-spacing:0.12em">PDF · 22 PAGES · 1.4 MB</div>
+        <!-- PDF cover preview -->
+        <div style="background:var(--ink);border-radius:4px;padding:28px 20px 20px;text-align:center;margin-bottom:24px;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--red)"></div>
+          <div style="position:absolute;top:0;left:0;width:4px;bottom:0;background:#D4AF5F"></div>
+          <div style="font-family:var(--sans);font-weight:800;font-size:22px;color:#fff;line-height:1.2;margin-bottom:8px">The Italy<br/>Relocation<br/><span style="color:var(--red)">Checklist</span></div>
+          <div style="font-family:var(--mono);font-size:9px;color:#D4AF5F;letter-spacing:0.14em;margin-top:10px">47 ITEMS · 5 PHASES · PDF</div>
         </div>
-        <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Grazie! Check your inbox.';this.querySelector('button').style.background='var(--green)';">
-          <div style="font-family:var(--sans);font-weight:700;font-size:18px;margin-bottom:18px">Get the free checklist</div>
-          <input class="form-input" type="text" placeholder="First name" required style="background:var(--paper2);color:var(--ink);border-color:var(--border);margin-bottom:10px"/>
-          <input class="form-input" type="email" placeholder="your@email.com" required style="background:var(--paper2);color:var(--ink);border-color:var(--border);margin-bottom:14px"/>
-          <button class="form-submit" type="submit">Email me the PDF →</button>
-        </form>
-        <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);text-align:center;margin-top:14px;letter-spacing:0.06em">No spam · Newsletter included · Unsubscribe anytime</div>
+        <!-- Form -->
+        <div id="checklist-form-wrap">
+          <div style="font-family:var(--sans);font-weight:700;font-size:18px;margin-bottom:6px">Get the free checklist</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);margin-bottom:16px;letter-spacing:0.04em">Subscribe to Italopedia · Instant download</div>
+          <form id="checklist-form" onsubmit="clSubscribe(this,event)">
+            <input class="form-input" type="email" name="email" placeholder="your@email.com" required style="background:var(--paper2);color:var(--ink);border-color:var(--border);margin-bottom:12px"/>
+            <button class="form-submit" type="submit">Download free PDF →</button>
+          </form>
+        </div>
+        <div id="checklist-success" style="display:none;text-align:center;padding:16px 0">
+          <div style="font-size:28px;margin-bottom:10px">✓</div>
+          <div style="font-family:var(--sans);font-weight:700;font-size:16px;margin-bottom:14px">You're subscribed!</div>
+          <a href="italy-relocation-checklist.pdf" download class="form-submit" style="display:block;text-align:center;text-decoration:none">Download PDF →</a>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);margin-top:12px">Check your inbox for the welcome email too.</div>
+        </div>
+        <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);text-align:center;margin-top:14px;letter-spacing:0.06em">No spam · Unsubscribe anytime</div>
       </aside>
+<script>
+function clSubscribe(form, e) {
+  e.preventDefault();
+  var email = form.querySelector('[type="email"]').value.trim();
+  if (!email) return;
+  var btn = form.querySelector('button');
+  btn.disabled = true; btn.textContent = '...';
+  fetch('https://app.beehiiv.com/subscriptions', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email, publicationId: '83935e9a-30fd-4975-a79a-e10be8100271', referringSite: 'checklist'})
+  }).then(function(r) {
+    document.getElementById('checklist-form-wrap').style.display = 'none';
+    document.getElementById('checklist-success').style.display = 'block';
+  }).catch(function() {
+    document.getElementById('checklist-form-wrap').style.display = 'none';
+    document.getElementById('checklist-success').style.display = 'block';
+  });
+}
+</script>
     </div>
   </div><footer class="footer"><div class="footer-inner">
     <div class="footer-top">
