@@ -2,7 +2,7 @@
 """
 Genera "Where to Live in Italy: 20 City Profiles" — Italopedia PDF ($19)
 Uso: python3 generate_where_to_live_pdf.py
-Output: shop/downloads/where-to-live.pdf
+Output: shop/downloads/where-to-live-italy.pdf
 """
 
 from reportlab.lib.pagesizes import A4
@@ -54,7 +54,7 @@ MT = 2.0 * cm
 MB = 2.2 * cm
 TW = W - ML - MR   # text width
 
-OUTPUT = Path(__file__).parent / "shop/downloads/where-to-live.pdf"
+OUTPUT = Path(__file__).parent / "shop/downloads/where-to-live-italy.pdf"
 
 # ── City data ────────────────────────────────────────────────────────────────
 
