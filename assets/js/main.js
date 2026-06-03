@@ -4,32 +4,30 @@
 ═══════════════════════════════════════════ */
 
 /* ── Newsletter subscribe ───────────────── */
-function nlSubscribe(form, e) {
+function kitSubscribe(form, e) {
   e.preventDefault();
   var email = form.querySelector('[type="email"]').value.trim();
   if (!email) return;
   var btn = form.querySelector('[type="submit"]');
+  var msgEl = form.querySelector('.kit-msg');
+  var origText = btn.textContent;
   btn.disabled = true;
   btn.textContent = '...';
-  var msgEl = (form.closest('.newsletter-form') || form).querySelector('.nl-msg');
-  function success() {
-    var txt = '✓ You\'re in — check your inbox.';
-    if (msgEl) { msgEl.textContent = txt; }
-    else { var s = document.createElement('span'); s.style.cssText='color:var(--paper);font-size:14px;display:block;margin-top:10px'; s.textContent = txt; form.appendChild(s); }
-    btn.textContent = '✓';
-  }
-  function fallback() {
-    btn.disabled = false; btn.textContent = 'Subscribe →';
-    var txt = '✗ Something went wrong — try again.';
-    if (msgEl) { msgEl.textContent = txt; }
-  }
-  fetch('https://api.convertkit.com/v3/forms/9514936/subscribe', {
+  var body = 'email_address=' + encodeURIComponent(email);
+  fetch('https://app.kit.com/forms/7288c7a93d/subscriptions', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ api_key: 'Ub3gLjuKcdCiEejT', email: email })
-  }).then(function(r) {
-    if (r.ok || r.status === 200 || r.status === 201) { success(); } else { fallback(); }
-  }).catch(fallback);
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body
+  }).then(function() {
+    btn.textContent = '✓ Subscribed';
+    form.querySelector('[type="email"]').value = '';
+    if (msgEl) msgEl.textContent = '✓ You\'re in — check your inbox.';
+  }).catch(function() {
+    btn.disabled = false;
+    btn.textContent = origText;
+    if (msgEl) msgEl.textContent = '✗ Something went wrong — try again.';
+  });
 }
 
 (function(){
