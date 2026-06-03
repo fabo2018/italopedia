@@ -85,7 +85,7 @@ export async function onRequestPost(context) {
         </p>
       </div>`;
   } else {
-    emailHtml = `<p>Thank you for your purchase! Contact info@italopedia.com with your order details.</p>`;
+    emailHtml = `<p>Thank you for your purchase! Contact fabrizio@italopedia.com with your order details.</p>`;
   }
 
   await fetch('https://api.resend.com/emails', {
@@ -95,7 +95,7 @@ export async function onRequestPost(context) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      from: 'Fabrizio at Italopedia <info@italopedia.com>',
+      from: 'Fabrizio at Italopedia <fabrizio@italopedia.com>',
       to: email,
       subject: product ? 'Your ' + product.title + ' is here 🇮🇹' : 'Your Italopedia purchase is ready 🇮🇹',
       html: emailHtml
