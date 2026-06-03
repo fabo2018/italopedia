@@ -659,6 +659,10 @@ body{
   margin-top:8px;font-weight:500;
 }
 .form-submit:hover{background:var(--red2)}
+/* Kit (ConvertKit) form overrides */
+.formkit-powered-by-convertkit-container{display:none!important}
+.formkit-form{width:100%!important;max-width:100%!important}
+.newsletter-embed .formkit-form,.newsletter-section .formkit-form{display:block!important}
 /* newsletter embed card */
 .nl-embed-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:32px;position:relative}
 .nl-embed-card::before{content:'';position:absolute;top:-1px;left:24px;width:48px;height:2px;background:var(--red)}
