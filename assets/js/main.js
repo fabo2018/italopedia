@@ -153,4 +153,27 @@ function kitSubscribe(form, e) {
     el.textContent = new Date().getFullYear();
   });
 
+  // ── Share buttons ──────────────────────────
+  document.querySelectorAll('.share-btn').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var title = document.title.replace(' — Italopedia', '').replace(' - Italopedia', '');
+      var url = window.location.href;
+      var t = btn.getAttribute('title') || '';
+      if(t === 'Email'){
+        window.location.href = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(url);
+      } else if(t === 'Twitter'){
+        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title), '_blank', 'width=560,height=360');
+      } else if(t === 'Link'){
+        if(navigator.clipboard){
+          navigator.clipboard.writeText(url).then(function(){
+            var orig = btn.textContent;
+            btn.textContent = '✓';
+            setTimeout(function(){ btn.textContent = orig; }, 1500);
+          });
+        }
+      }
+    });
+  });
+
 })();
