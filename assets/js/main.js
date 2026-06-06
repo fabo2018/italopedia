@@ -14,7 +14,7 @@ function kitSubscribe(form, e) {
   btn.disabled = true;
   btn.textContent = '...';
   var body = 'email_address=' + encodeURIComponent(email);
-  fetch('https://app.kit.com/forms/7288c7a93d/subscriptions', {
+  fetch('https://app.kit.com/forms/9514936/subscriptions', {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
