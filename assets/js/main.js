@@ -13,13 +13,13 @@ function kitSubscribe(form, e) {
   var origText = btn.textContent;
   btn.disabled = true;
   btn.textContent = '...';
-  var data = new FormData();
-  data.append('email_address', email);
-  fetch('https://app.kit.com/forms/7288c7a93d/subscriptions', {
+  fetch('https://api.convertkit.com/v3/forms/9514936/subscribe', {
     method: 'POST',
-    body: data
-  }).then(function(r) {
-    if (r.ok || r.status === 200 || r.type === 'opaque') {
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ api_key: 'Ub3gLjuKcdCiEejTJq1mfw', email: email })
+  }).then(function(r) { return r.json(); })
+  .then(function(data) {
+    if (data.subscription || data.subscriber) {
       btn.textContent = '✓ Subscribed';
       form.querySelector('[type="email"]').value = '';
       if (msgEl) msgEl.textContent = '✓ You\'re in — check your inbox.';
