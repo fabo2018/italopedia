@@ -16,6 +16,10 @@
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate
 
+# ads.txt — always fresh so AdSense crawler never gets a stale response
+/ads.txt
+  Cache-Control: no-cache
+
 # PDF downloads — force download, no caching of purchase-gated files
 /shop/downloads/*.pdf
   Content-Disposition: attachment
